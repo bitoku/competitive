@@ -1,0 +1,27 @@
+from collections import Counter
+
+def main():
+    n, M = [int(x) for x in input().split()]
+    students = [int(x) for x in input().split()]
+    counter = Counter()
+    result = []
+    total = 0
+    cnt = 0
+    for student in students:
+        total += student
+        while total > M:
+            m = max(counter)
+            total -= m
+            counter[m] -= 1
+            if counter[m] <= 0:
+                del counter[m]
+            cnt += 1
+        else:
+            result.append(cnt)
+        counter[student] += 1
+    print(" ".join([str(x) for x in result]))
+
+main()
+
+
+
