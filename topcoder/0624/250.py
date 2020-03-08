@@ -9,17 +9,6 @@ class EvilCakeCutter:
             return 0.0
 
         return 1 - (w1 / (w-w1)) * (h1 / (h-h1))
-        # b = w - 2 * w1
-        # a = w - w1
-        #
-        # prob_w = (a - b) / a
-        #
-        # b = h - 2 * h1
-        # a = h - h1
-        #
-        # prob_h = (a - b) / a
-        #
-        # return 1 - prob_w * prob_h
 
 c = EvilCakeCutter()
 

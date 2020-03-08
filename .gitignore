@@ -1,2 +1,4 @@
 venv
 **/*.dSYM
+cmake-build-debug
+*.out
